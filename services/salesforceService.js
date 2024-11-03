@@ -9,6 +9,6 @@ exports.fetchSalesforceAccount = async () => {
     );
     return conn.query("SELECT Id, Name FROM Account");
   } catch (error) {
-    console.log("error => ", error);
+    console.log("Error from salesforce login => ", error);
   }
 };

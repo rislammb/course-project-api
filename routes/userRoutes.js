@@ -1,6 +1,10 @@
 const router = require("express").Router();
-const { getSalesforceAccount } = require("../controllers/userController");
+const {
+  getUserById,
+  getSalesforceAccount,
+} = require("../controllers/userController");
 
 router.get("/salesforce", getSalesforceAccount);
+router.get("/:userId", getUserById);
 
 module.exports = router;
